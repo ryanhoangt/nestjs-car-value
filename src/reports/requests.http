@@ -1,3 +1,4 @@
+### Create a new report
 POST http://localhost:3000/reports
 Content-Type: application/json
 
@@ -10,3 +11,15 @@ Content-Type: application/json
     "lat": 37.7749,
     "lng": 122.4194
 }
+
+### Approve an existing report
+PATCH http://localhost:3000/reports/1
+Content-Type: application/json
+
+{
+    "approved": true
+}
+
+### Get an estimation for an existing vehicle
+GET http://localhost:3000/reports?make=Toyota&model=Camry&year=2012&lat=38.1&lng=123.2&mileage=10002
+
